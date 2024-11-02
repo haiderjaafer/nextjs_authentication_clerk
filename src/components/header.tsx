@@ -3,6 +3,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 // import { ThemeToggle } from '@/components/theme-toggle'
 import { Button } from '@/components/ui/button'
+import SignInPage from '@/app/sign-in/[[...sign-in]]/page'
 
 export default function Header() {
   return (
@@ -24,16 +25,28 @@ export default function Header() {
         </ul>
 
         <div className='flex items-center justify-between gap-6'>
-          {/* <ThemeToggle /> */}
+          
 
           <SignedOut>
-            <SignInButton mode='modal'>
-             <Button >Sign in</Button>    {/* shadcn button */}
+            <SignInButton>
+              {/* <Button  size='sm'>Sign in</Button> */}
+              Login
             </SignInButton>
           </SignedOut>
           <SignedIn>
             <UserButton />
-          </SignedIn>
+          </SignedIn>  
+
+
+
+
+
+
+
+
+
+
+
         </div>
       </nav>
     </header>
